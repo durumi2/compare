@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Comparison Tool</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        form { display: flex; margin-bottom: 20px; justify-content: space-between; }
+        textarea {
+            width: 45%; /* 입력 필드의 너비 */
+            height: 150px; /* 입력 필드의 높이 */
+            padding: 12px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        button {
+            height: 50px; /* 버튼의 높이 */
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            align-self: center; /* 버튼을 입력 필드와 수직으로 중앙에 배치 */
+        }
+        .container { display: flex; justify-content: space-between; width: 100%; }
+        .list { width: 45%; padding: 10px; }
+        .matched, .unmatched, .splits { margin-bottom: 20px; }
+        ul { list-style-type: none; padding-left: 0; }
+        li { padding: 10px; background-color: #f0f0f0; margin-top: 5px; }
+        .unmatched li { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Compare Texts</h1>
+    <form method="post">
+        PDF (Input Text): <textarea name="input_text" placeholder="Enter input text separated by commas, colon, or diamond" required></textarea><br><br>
+        Homepage (Reference Text): <textarea name="reference_text" placeholder="Enter output text separated by commas, colon, or diamond" required></textarea><br><br>
+        <button type="submit">Compare</button>
+    </form>
+    <div class="container">
+        <div class="list">
+            <h2>Matched Texts</h2>
+            <ul>
+                
+            </ul>
+        </div>
+        <div class="list">
+            <h2>Unmatched PDF Texts</h2>
+            <ul>
+                
+            </ul>
+        </div>
+        <div class="list">
+            <h2>Unmatched Homepage Texts</h2>
+            <ul>
+                
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
